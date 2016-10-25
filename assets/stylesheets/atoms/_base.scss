@@ -1,0 +1,88 @@
+/*
+--------------------------------------------------------------------------------
+HTML elements look n feel
+--------------------------------------------------------------------------------
+*/
+html {
+  /* base font-size is at reset.scss */
+  // @include phablet { @include retina(1.3) { font-size: 80%; } }
+  // @include tablet  { @include retina(1.5) { font-size: 90%; } }
+  // @include desktop { @include retina(2)   { font-size: 100%; } }
+}
+
+body {
+  padding-top: 80px; // same as header height
+  background-color: $white;
+  color: $dark;
+  font: normal 400 2rem/2.8rem 'cera', sans-serif;
+  letter-spacing: -.001em;
+}
+
+h1::selection, h3::selection, h2::selection, p::selection {
+  color: $white;
+  background: $red;
+ }
+h1 {
+  font-size: 4rem;
+  line-height: 140%;
+  font-family: 'Cera';
+  color: black;
+  @include transition;
+}
+
+h2 {
+  font-family: 'Open Sans';
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+
+  &.copyright {
+    text-transform: lowercase;
+    letter-spacing: 1px;
+  }
+}
+
+h3 {
+  font-size: 2.8rem;
+  line-height: 140%;
+  font-family: 'Cera';
+  color: black;
+}
+
+p {
+  font-family: 'Georgia';
+  font-size: 1.8rem;
+  color: $darkGray;
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  @include transition();
+  cursor: pointer;
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+  &:hover {
+    text-decoration: none;
+    h1 {
+      color: $red;
+    }
+   }
+}
+
+b {
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 800;
+}
+
+i {
+  font-style: italic;
+}

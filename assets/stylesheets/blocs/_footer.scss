@@ -1,0 +1,18 @@
+footer {
+  height: 25rem;
+  display: flex;
+  background-color: $light;
+
+  button {
+    background-color: transparent;
+    color: $darkGray;
+    border: 6px solid $light;
+    width: 20%;
+
+    &:hover {
+      background-color: transparent;
+      color: $darkGray;
+      border: 6px solid white;
+    }
+  }
+}

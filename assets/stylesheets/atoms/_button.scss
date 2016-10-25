@@ -1,0 +1,16 @@
+button {
+  color: $white;
+  background-color: $red;
+  padding: 2rem;
+  font-family: 'Cera';
+  font-size: 2rem;
+  cursor: pointer;
+  border: 6px solid $red;
+  @include transition;
+
+  &:hover {
+    border: 6px solid $light;
+    background-color: white;
+    color: $red;
+  }
+}
