@@ -11,70 +11,95 @@
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="assets/javascript/wow.min.js"></script>
   <script src="assets/javascript/custom.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider-wrapper').slick({
+        dots: false,
+        prevArrow: false,
+        nextArrow: false,
+        draggable: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 2000
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
 </head>
 
 
-<header class='header nav-down'>
-  <div class='wrapper center'>
-    <div class='flex-wrapper-sb center'>
-      <a href="index.html"><h3 class='red'>redlight</h3></a>
-      <img src="assets/images/burger.svg" class="burger">
-    </div>
-  </div>
-</header>
-
-<div class='bg-dark menu'>
-  <div class='flex-wrapper-col wrapper center fh pb-100'>
-    <a href="work.html"><h1 class='white'>Work</h1></a>
-    <a href="news.html"><h1 class='white'>Latest</h1></a>
-    <a href="contacts.html"><h1 class='white'>Contacts</h1></a>
-    <a href="about.html"><h1 class='white'>We are <span class='red'>redlight</span></h1></a>
-  </div>
-</div>
-
 <body>
-  <div class='wrapper content center mt-150 mb-100'>
-    <h2>web and mobile development</h2>
-    <h1>We are redlight</h1>
-    <div class='bg-red mt-75 pt-200 pb-200'>
-      <h1 class='text-wrapper center white t-center'>think. prototype. code. break.
-rethink. build. ship. celebrate.
-repeat.</h1>
 
+  <header class='header nav-down hide'>
+    <div class='wrapper center'>
+      <div class='flex-wrapper-sb center'>
+        <a href="index.html"><h3 class='red'>redlight</h3></a>
+        <img src="assets/images/burger.svg" class="burger">
+      </div>
     </div>
-    <div class='text-wrapper center mb-50'>
-        <p class='mt-75'>redlight is a web agency designed to get your product into the market. Specialized in the health market, redlight helps companies reach their audience with carefully designed products.</p>
-    </div>
-    <div class='text-wrapper center'>
-      <h2 class='red'>recent projects</h2>
-    </div>
-    <div class='center fw flex-wrapper'>
-      <img src="assets/images/storytrail.gif" class="img-80">
-    </div>
-    <div class='text-wrapper center'>
-      <h2>BACKEND Development</h2>
-      <h3>Storytrail</h3>
-      <a href="work.html">
-        <button class='mt-50'>view all projects</button>
-      </a>
+  </header>
+
+  <div class='bg-dark menu'>
+    <div class='flex-wrapper-col wrapper center fh pb-100'>
+      <a href="work.html"><h1 class='white'>Work</h1></a>
+      <a href="news.html"><h1 class='white'>Latest</h1></a>
+      <a href="contacts.html"><h1 class='white'>Contacts</h1></a>
+      <a href="about.html"><h1 class='white'>We are <span class='red'>redlight</span></h1></a>
     </div>
   </div>
+
+
+  <div class='fs-home'>
+    <div class='slider-home'>
+      <div class='slider-wrapper'>
+        <a class='slider' href='javascript:void(0);'>
+          <img width="350" height="350">
+          <div class='proj-info'>
+            <h2 class='white mb-5'><b>Storytrail</b></h2>
+            <p class='white'>view project<span class='right'>1/4</span></p>
+          </div>
+        </a>
+
+        <a class='slider' href='javascript:void(0);'>
+          <img width="350" height="350">
+          <div class='proj-info'>
+            <h2 class='white mb-5'><b>MD Revolution</b></h2>
+            <p class='white'>view project<span class='right'>2/4</span></p>
+          </div>
+        </a>
+
+        <a class='slider' href='javascript:void(0);'>
+          <img width="350" height="350">
+          <div class='proj-info'>
+            <h2 class='white mb-5'><b>Be A Mom</b></h2>
+            <p class='white'>view project<span class='right'>3/4</span></p>
+          </div>
+        </a>
+
+        <a class='slider' href='javascript:void(0);'>
+          <img width="350" height="350">
+          <div class='proj-info'>
+            <h2 class='white mb-5'><b>Plunc</b></h2>
+            <p class='white'>view project<span class='right'>4/4</span></p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class='tag-home'>
+      <h2 class='white'>web and mobile development studio focused on <b>products</b>.</h2>
+    </div>
+  </div>
+
 </body>
-<footer>
-  <div class='text-wrapper center'>
-    <h2>follow us on</h2>
-    <div class='flex-wrapper-sb mt-10 mb-30'>
-      <button><a href="https://www.facebook.com/RedLightSoftware/" target='_blank'>facebook  </a></button>
-      <button><a href="https://twitter.com/weareredlight" target='_blank'>twitter</a></button>
-      <button><a href="https://medium.com/@weareredlight" target='_blank'>medium</a></button>
-      <button><a href="https://www.linkedin.com/company/redlight-software-inc" target='_blank'>linkedin</a></button>
-    </div>
-    <h2 class='fw t-right copyright'>© copyright all rights reserved to redlight</h2>
-  </div>
-</footer>
 </html>
