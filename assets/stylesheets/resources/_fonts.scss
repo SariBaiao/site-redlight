@@ -8,20 +8,20 @@
 @font-face {
   font-family: 'FD-Light';
   font-style: normal;
-  font-weight: 300;
-  src: asset_url('FD-Light.woff') format('woff');
+  font-weight: 200;
+  src: url(../fonts/FD-Light.woff) format('woff');
 }
 
 @font-face {
   font-family: 'FD-Regular';
   font-style: normal;
   font-weight: 400;
-  src: asset_url('FD-Regular.woff') format('woff');
+  src: url(../fonts/FD-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'G-Regular';
   font-style: normal;
   font-weight: 400;
-  src: asset_url('G-Regular.woff') format('woff');
+  src: url(../fonts/G-Regular.woff) format('woff');
 }

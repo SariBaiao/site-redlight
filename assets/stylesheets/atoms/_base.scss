@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 80px; // same as header height
+  // padding-top: 80px; // same as header height
   background-color: $white;
   color: $dark;
   font: normal 400 2rem/2.8rem 'FD-Light', sans-serif;
@@ -35,6 +35,8 @@ h2 {
   font-family: 'FD-Light';
   font-size: 2.8rem;
   color: $darkGray;
+  font-weight: 200;
+  line-height: 130%;
 }
 
 h3 {
