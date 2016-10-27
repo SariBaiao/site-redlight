@@ -1,17 +1,25 @@
 .fs-home {
   background-color: $red;
   color: white;
-  display: flex;
-  height: 100vh;
-  width: 100vw;
+  @include desktop {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 .slider-home {
-  width: 45%;
+  width: 100%;
+  @include desktop {
+    width: 45%;
+  }
 
   .slider-wrapper {
-    float: right;
-    max-width: 50rem;
+    max-width: 100%;
+    @include desktop {
+      float: right;
+      max-width: 50rem;
+    }
   }
 }
 
@@ -32,11 +40,20 @@
 }
 
 .tag-home {
-  width: 55%;
+  width: 100%;
   box-shadow: 0 0 60px rgba(100, 0, 0, .4);
   align-items: center;
   display: flex;
-  padding-left: 10rem;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 55%;
+    padding-left: 10rem;
+    justify-content: inherit;
+  }
 
   h2 {
     line-height: 140%;
