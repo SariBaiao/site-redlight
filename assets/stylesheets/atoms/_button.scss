@@ -7,6 +7,10 @@ button {
   cursor: pointer;
   border: 6px solid $red;
   @include transition;
+  width: 100%;
+  @include phablet {
+    width: auto;
+  }
 
   &:hover {
     border: 6px solid $light;
