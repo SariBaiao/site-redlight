@@ -61,8 +61,9 @@ a {
   @include transition();
   cursor: pointer;
   text-decoration: none;
+  color: $red;
   &:visited {
-    color: inherit;
+    color: $red;
   }
   &:hover {
     text-decoration: none;
