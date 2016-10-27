@@ -1,5 +1,22 @@
 .clients {
-  padding-top:9rem;
-  padding-bottom: 9rem;
+  padding: 9rem 0;
 
+  h2 {
+    margin-bottom: 10rem;
+    @include tablet { margin-bottom: 20rem; }
+  }
+
+  .flex-wrapper-sb {
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      margin-bottom: 20rem;
+      &:last-child { margin-bottom: 10rem; }
+    }
+
+    img {
+      margin-bottom: 10rem;
+      @include tablet { margin-bottom: 0; }
+    }
+  }
 }
