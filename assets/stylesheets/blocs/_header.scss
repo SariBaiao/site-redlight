@@ -9,8 +9,23 @@ header {
   height: 80px;
   z-index: 2;
   @include transition;
+
+  &.invert {
+    background-color: transparent;
+    h3 { color: white; }
+    .burger {
+      &.active span { background: transparent; }
+      span {
+        background: white;
+        &:before { background: white; }
+        &:after { background: white; }
+      }
+    }
+  }
+
   &.open {
-    background-color: black;
+    background-color: transparent;
+    @include transition;
     h3 {
       color: white;
     }
@@ -24,17 +39,14 @@ header {
 
 // we'll add this class using javascript
 .nav-up {
-top: -80px; // same as header height. use variables in LESS/SASS
-}
-
-.burger {
-  cursor: pointer;
+  top: -80px; // same as header height. use variables in LESS/SASS
 }
 
 ///MENU!!//
-a.burger {
+.burger {
   cursor: pointer;
-  padding: 12px 0;
+  padding: 2rem 1rem;
+  margin: -.5rem -.5rem 0 0;
 
   span {
     position: relative;
@@ -42,7 +54,7 @@ a.burger {
     width: 30px;
     height: 4px;
     background: black;
-    transition: all .2s ease-in-out;
+    @include transition;
 
     &:before, &:after {
       position: absolute;
@@ -61,23 +73,23 @@ a.burger {
       top: 8px;
     }
   }
-}
+  &.active {
+    span {
+      background: transparent;
 
-a.active {
-  span {
-    background: transparent;
+      &:before {
+        background: white;
+        transform: rotate(45deg) translate(5px, 6px);
+      }
 
-    &:before {
-      background: white;
-      transform: rotate(45deg) translate(5px, 6px);
-    }
-
-    &:after {
-      background: white;
-      transform: rotate(-45deg) translate(5px, -6px);
+      &:after {
+        background: white;
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
     }
   }
 }
+
 
 
 .menu {
@@ -86,6 +98,7 @@ a.active {
   width: 100vw;
   height: calc(100vh);
   top: 0;
+  z-index: 1;
   &.open {
     display: block;
   }

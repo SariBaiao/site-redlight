@@ -41,8 +41,13 @@ $(document).ready(function(){
 
   $('.burger').on('click', function(){
     $(this).toggleClass('active');
-    $('.menu').toggleClass('open');
     $('header').toggleClass('open');
+    $('.menu').toggleClass('open');
+
+    // $('.menu, header').fadeToggle(200, function() {
+    //   $(this).toggleClass('open');
+    // });
+
     $('.content').toggleClass('hide');
   });
 
