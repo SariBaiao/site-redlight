@@ -33,6 +33,7 @@ $(document).ready(function(){
           // Scroll Up
           if(st + $(window).height() < $(document).height()) {
               $('header').removeClass('nav-up').addClass('nav-down');
+              $('header').removeClass('invert').addClass('from-scroll');
           }
       }
 
@@ -40,6 +41,7 @@ $(document).ready(function(){
   }
 
   $('.burger').on('click', function(){
+    $('header').removeClass('from-scroll').addClass('invert');
     $(this).toggleClass('active');
     $('body').toggleClass('menu-open');
     $('header, .menu').toggleClass('open');
