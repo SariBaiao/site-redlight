@@ -14,9 +14,25 @@
     width: 45%;
   }
 
+  .slider-mobile {
+    height: 70vh;
+    .slider {
+      margin: 0;
+      height: 100%;
+      padding-bottom: 3rem;
+
+      img {
+        margin: 0;
+      }
+    }
+    @include desktop { display: none; }
+  }
+
   .slider-wrapper {
+    display: none;
     max-width: 100%;
     @include desktop {
+      display: block;
       float: right;
       max-width: 50rem;
     }
@@ -45,9 +61,10 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  height: 30vh;
+  padding: 0 12.5%;
   @include desktop {
+    height: 100vh;
     padding-top: 0;
     padding-bottom: 0;
     width: 55%;
@@ -56,7 +73,9 @@
   }
 
   h2 {
+    font-size: 2rem;
     line-height: 140%;
     max-width: 40rem;
+    @include phablet { font-size: 2.8rem; }
   }
 }
