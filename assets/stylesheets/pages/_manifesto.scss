@@ -1,0 +1,13 @@
+.section-tab {
+  background-image: $section-tab-url;
+  background-size: cover;
+}
+
+.manifesto-nav {
+  a {
+    color: white;
+    &.active {
+      border-bottom: .3rem solid white;
+    }
+  }
+}

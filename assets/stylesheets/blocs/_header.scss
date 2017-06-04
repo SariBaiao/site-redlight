@@ -1,120 +1,27 @@
+.logo {
+  height: 8rem;
+  width: auto;
+}
+
 header {
+  background-color: rgba($white, 0.9);
   position: fixed;
   width: 100%;
   top: 0;
-  // background-color: white;
-  // box-shadow: 0 3px 6px rgba(0,0,0,0.02), 0 4px 10px rgba(0,0,0,0.08);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  height: 80px;
+  height: 10rem;
   z-index: 2;
   @include transition;
 
-  &.from-scroll {
-    background-color: white;
-    box-shadow: 0 0 2rem rgba(black, .1);
-  }
-
-  &.invert {
-    // background-color: transparent;
-    h3 { color: white; }
-    .burger {
-      &.active span { background: transparent; }
-      span {
-        background: white;
-        &:before { background: white; }
-        &:after { background: white; }
-      }
+  .wrapper {
+    max-width: 90%;
+    @include tablet {
+      max-width: 80%;
     }
   }
-
-  &.open {
-    // background-color: transparent;
-    @include transition;
-    h3 {
-      color: white;
-    }
-    .burger {
-      svg {
-        fill: white;
-      }
-    }
-  }
-}
-
-// we'll add this class using javascript
-.nav-up {
-  top: -80px; // same as header height. use variables in LESS/SASS
-}
-
-///MENU!!//
-.burger {
-  cursor: pointer;
-  padding: 2rem 1rem;
-  margin: -.5rem -.5rem 0 0;
-
-  span {
+  a.nav {
     position: relative;
-    display: block;
-    width: 30px;
-    height: 4px;
-    background: black;
-    @include transition;
-
-    &:before, &:after {
-      position: absolute;
-      background: black;
-      content: '';
-      width: 30px;
-      height: 4px;
-      transition: all .2s ease-in-out;
-    }
-
-    &:before {
-      top: -8px;
-    }
-
-    &:after {
-      top: 8px;
-    }
-  }
-  &.active {
-    span {
-      background: transparent;
-
-      &:before {
-        background: white;
-        transform: rotate(45deg) translate(5px, 6px);
-      }
-
-      &:after {
-        background: white;
-        transform: rotate(-45deg) translate(5px, -6px);
-      }
-    }
+    top: -1rem;
+    font-size: 1.8rem;
   }
 }
 
-
-
-.menu {
-  display: none;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  overflow: hidden;
-  background-color: black;
-  z-index: 1;
-  &.open {
-    display: block;
-  }
-  h1 {
-    cursor: pointer;
-  }
-}
-
-.menu-open {
-  height: 100vh;
-  overflow: hidden;
-}

@@ -5,7 +5,8 @@ Content wrapper
 */
 .wrapper {
   width: 100%;
-  max-width: 75%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 .text-wrapper {
   max-width: 65rem;
@@ -50,36 +51,4 @@ Content wrapper
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-
-
-/*
---------------------------------------------------------------------------------
-Menu wrapper
---------------------------------------------------------------------------------
-*/
-.wrapper-menu {
-  @include transition();
-  @include sans_serif(600);
-  background-color: black;
-  color: white;
-  font-size: 1.6rem;
-  height: 100%;
-  position: fixed;
-  right: -20rem;
-  top: 0;
-  width: 25rem;
-  z-index: 9;
-
-  &.menu-open{
-    @include translate(0, 0);
-  }
-
-  ul li {
-    list-style: none;
-    margin: 0;
-    padding: 6rem 0;
-    text-align: center;
-  }
 }

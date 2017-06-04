@@ -1,0 +1,16 @@
+.community-wrapper {
+  .community-info {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba($black, 0.7);
+    width: 100%;
+    padding: 2rem 1rem;
+    opacity: 0;
+    @include transition;
+  }
+  &:hover {
+    .community-info {
+      opacity: 1;
+    }
+  }
+}

@@ -1,20 +1,17 @@
 button {
   color: $white;
-  background-color: $red;
-  padding: 2rem;
-  font-family: 'Cera';
+  background: linear-gradient( to top right, $purple, $pinkOrange);
+  border-radius: .9rem;
+  padding: 1rem 1.2rem;
   font-size: 2rem;
   cursor: pointer;
-  border: 6px solid $red;
   @include transition;
   width: 100%;
   @include phablet {
     width: auto;
   }
-
-  &:hover {
-    border: 6px solid $light;
-    background-color: white;
-    color: $red;
+  &.btn-white {
+    background: transparent;
+    border: .1rem solid white;
   }
 }

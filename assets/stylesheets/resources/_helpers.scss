@@ -12,7 +12,10 @@ Colors
 .bg-blue { background-color: $blue; }
 .bg-green { background-color: $green; }
 .bg-camel { background-color: $camel; }
+.bg-white { background-color: $white; }
 
+
+.bg-gradient { background: linear-gradient( to top right, $purple, $pinkOrange); }
 
 .bb-light { border-bottom: 6px solid white;}
 
@@ -22,6 +25,8 @@ Colors
 .blue   { color: $blue;}
 .green   { color: $green;}
 .camel   { color: $camel;}
+.dark { color:$darkGray; }
+.purple { color:$purple; }
 
 /*
 --------------------------------------------------------------------------------
@@ -40,6 +45,7 @@ Text and alignments
 .hide        { display: none !important; }
 .fw          { width: 100%; }
 .fh          { height: 100%; }
+.w-24        { width: 24%; }
 .w-25        { width: 25%; }
 .w-40        { width: 40%; }
 .w-50        { width: 50%; }
@@ -68,6 +74,13 @@ Text and alignments
 
 .img-80      { width: 80%; height: 80%}
 .img-contain { object-fit: contain}
+
+.mobile-ib {
+  display: none;
+  @include tablet() {
+    display: inline-block;
+  }
+}
 /*
 --------------------------------------------------------------------------------
 Draggable elements
@@ -146,8 +159,11 @@ Margins
 .ml-200 { margin-left:   200px; }
 .ml-250 { margin-left:   250px; }
 
+
+.pt-10  { padding-top: 10px; }
 .pt-50  { padding-top: 50px;}
 .pt-100 { padding-top: 100px;}
+.pt-150 { padding-top: 150px;}
 .pt-200 { padding-top: 200px;}
 .pb-200 { padding-bottom: 200px;}
 .pb-100 { padding-bottom: 100px;}

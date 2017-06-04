@@ -14,43 +14,49 @@ body {
   // padding-top: 80px; // same as header height
   background-color: $white;
   color: $dark;
-  font: normal 400 2rem/2.8rem 'FD-Light', sans-serif;
+  font: normal 400 2rem/2.8rem 'Lato', sans-serif;
   letter-spacing: -.001em;
 }
 
 ::selection {
-  color: $white;
-  background: $red;
+  // color: $white;
+  // background: $red;
 }
 
 h1 {
-  font-size: 2.8rem;
-  line-height: 140%;
-  font-family: 'FD-Regular';
-  color: $darkGray;
+  font-size: 4rem;
+  line-height: 100%;
+  font-family: 'Lato';
+  color: $white;
   @include transition;
+  @include tablet() {
+    font-size: 6rem;
+  }
 }
 
 h2 {
-  font-family: 'FD-Light';
+  font-family: 'Lato';
   font-size: 2.8rem;
   font-weight: 300;
-  color: $darkGray;
+  color: $white;
   font-weight: 200;
   line-height: 130%;
 }
 
 h3 {
-  font-size: 2.8rem;
-  line-height: 140%;
-  font-family: 'Cera';
-  color: black;
+  font-size: 2.4rem;
+  line-height: 100%;
+  font-family: 'Lato';
+  color: $white;
 }
 
 p {
-  font-family: 'G-Regular';
-  font-size: 1.8rem;
-  color: $gray;
+  font-family: 'Lato';
+  font-size: 1.6rem;
+  color: $white;
+  @include tablet() {
+    font-size: 1.8rem;
+  }
 }
 
 span {
@@ -61,15 +67,10 @@ a {
   @include transition();
   cursor: pointer;
   text-decoration: none;
-  color: $red;
-  &:visited {
-    color: $red;
-  }
-  &:hover {
-    text-decoration: none;
-    h1 {
-      color: $red;
-    }
+  color: $pink;
+  padding-bottom: 1rem;
+  &.active {
+    border-bottom: .3rem solid $pink;
   }
 }
 
